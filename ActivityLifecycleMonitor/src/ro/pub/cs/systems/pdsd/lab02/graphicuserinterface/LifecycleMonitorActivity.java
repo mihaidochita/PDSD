@@ -76,6 +76,58 @@ public class LifecycleMonitorActivity extends Activity {
         cancelButton.setOnClickListener(buttonClickListener);
         Log.d(Constants.TAG, "onCreate() method was invoked");
     }    
+    
+    @Override
+    protected void onStart(){
+    	super.onStart();
+    	Log.d(Constants.TAG, "onStart() method was invoked");
+    }
+    
+ 
+    @Override
+    protected void onRestart(){
+    	super.onRestart();
+    	Log.d(Constants.TAG, "onRestart() method was invoked");
+    }
+    
+    @Override
+    protected void onResume(){
+    	super.onResume();
+    	Log.d(Constants.TAG, "onResume() method was invoked");
+    }
+    
+    @Override
+    protected void onPause(){
+    	super.onPause();
+    	Log.d(Constants.TAG, "onPause() method was invoked");
+    }
+    
+    @Override
+    protected void onStop(){
+    	super.onStop();
+    	Log.d(Constants.TAG, "onStop() method was invoked");
+    }
+    
+    @Override
+    protected void onDestroy(){
+    	super.onDestroy();
+    	Log.d(Constants.TAG, "onDestroy() method was invoked");
+    }
+    
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+      // apelarea metodei din activitatea parinte este recomandata, dar nu obligatorie
+      super.onSaveInstanceState(savedInstanceState);
+      // ...
+    }
+   
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+      //apelarea metodei din activitatea parinte este recomandata, dar nu obligatorie
+      super.onRestoreInstanceState(savedInstanceState);
+      // ...
+    }
+   
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
